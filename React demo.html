@@ -56,9 +56,11 @@
       description: "this is a very interesting image",
     };
 
-    // Rendering function
+    // Rendering function. According the LaiOffer's note: 
+    // "With our knowledge so far, the only way to update the UI is to create a new element, and pass it to ReactDOM.render()"
     function tick() {
-      ReactDOM.render(<Element description={comment.description} text={comment.text} author={comment.author}/>, document.getElementById('root'));
+      ReactDOM.render(<Element description={comment.description} text={comment.text} author={comment.author}/>, 
+      document.getElementById('root'));
     }
 
     // Update the page every 1s
